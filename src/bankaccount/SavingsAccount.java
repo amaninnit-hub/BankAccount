@@ -24,6 +24,7 @@ public class SavingsAccount extends BankAccount{
     public void accountInfo(){
         System.out.println("Owner: " + owner);
         System.out.println("Balance: " + balance);
+        System.out.println("Account Number: " + accountNumber);
         System.out.println("Interest rate: " + interestRate);
     }
     

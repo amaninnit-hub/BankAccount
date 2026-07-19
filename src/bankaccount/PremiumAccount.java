@@ -29,7 +29,8 @@ public class PremiumAccount extends BankAccount implements Transferable{
     @Override
     public void accountInfo(){
         System.out.println("Owner: " + owner);
-        System.out.println("Balance: " + balance);      
+        System.out.println("Balance: " + balance);
+        System.out.println("Account Number: " + accountNumber);
         System.out.println("Credit limit: " + creditLimit);
     }
     
@@ -37,14 +38,7 @@ public class PremiumAccount extends BankAccount implements Transferable{
     public double calculateFee(){
         return 50.0; 
     }
-    
-    @Override
-    public void transfer(BankAccount target, double amount){
-        this.balance = this.balance - amount;
-        target.balance = target.balance - amount; 
-        System.out.println("Transferred " + amount + " to " + target.owner);
-    }
-    
+  
     public void requestLoan(double amount){
         System.out.println(owner + " requested a loan of " + amount);
     }
